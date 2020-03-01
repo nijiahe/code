@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+/*
+ul {
+    list-style: none;
+}*/
+
+.head {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    height: 100px;
+    z-index: 100;
+}
+
+.head > .inner {
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.head > .inner > .logo {
+    float:left;
+}
+
+.head > .inner > .nav {
+    float:right;
+    line-height: 100px;
+}
+
+.head > .inner > .nav > ul > li {
+    display: inline-block;/*让li可以在一行上显示*/
+}
+
+.head > .inner > .nav > ul > li a{
+    display: block;/*让a有长宽*/
+    padding: 0px 20px;
+    height: 98px;
+    text-decoration: none;
+    color: #333;
+    margin-top: 1px;
+}
+
+.head > .inner > .nav > ul > li a:hover{
+    background-color: rgba(162, 240, 255, 0.59);
+    color: #aa0000;
+}
+
+.content {
+    position: relative;
+    top: 150px;
+}

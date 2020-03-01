@@ -1,0 +1,36 @@
+.travel_show_text {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+}
+
+.yangpizhi {
+    --kuan:500px;
+    --gao: 600px;
+    padding: 20px;
+    background-image: url("../image/yangpizhi.png");
+    background-size: var(--kuan),var(--gao);
+    background-size: 500px,600px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 600px;
+}
+
+.yangpizhi_context {
+    font-size: 18px;
+    position: relative;
+    padding: 60px 80px;
+    animation: yangpizhi 1500ms 1 ease-out;
+    white-space:normal; word-break:break-all;overflow:hidden;
+}
+
+@keyframes yangpizhi {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

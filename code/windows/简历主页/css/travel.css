@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: .5rem;
+}
+button {
+    background: transparent;
+    border: .25rem solid currentColor;
+    border-radius: 1rem;
+    color: hsl(173, 100%, 50%);
+    font-size: 1.2em;
+    padding: .7rem 1.5rem
+}
+.hyper button {
+    color: hsl(343, 100%, 50%);
+}
+
+.star {
+    width: 1.5vmin;
+    height: 0.1vmin;
+
+    transform:
+            translateZ(-100vmin)
+            rotateY(90deg)
+            rotateX(var(--rx))
+            translateZ(var(--x))
+            scaleX(1);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    animation: none 900ms infinite ease-in;
+
+    background: white;
+}
+
+@keyframes hyper {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform:
+                rotateY(90deg)
+                rotateX(var(--rx))
+                translateZ(var(--x))
+                scaleX(6);
+    }
+}
+
+.left_button {
+    left: 0px;
+}
+
+.right_button {
+    right: 0px;
+}
+
+.button {
+    --gao: 200px;
+    --kuan: 80px;
+    height: var(--gao);height: 200px;
+    width: var(--kuan);width: 80px;
+    line-height: var(--gao);line-height: 200px;
+    text-align: center;
+    font-size: 20px;
+    cursor: default;
+    z-index: 100;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto 0px;
+    background-color: rgba(50, 50, 50, 0.4);
+}
+
+.button:hover {
+    background-color: rgba(50, 50, 50, 1);
+}
+
+.date {
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 150px;
+    left: 150px;
+    text-align: center;
+    font-size: 40px;
+    color: orange;
+}
+
+.travel_show_text {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+}
+
+.yangpizhi {
+    --kuan:500px;
+    --gao: 600px;
+    padding: 20px;
+    background-image: url("../image/yangpizhi.png");
+    background-size: var(--kuan),var(--gao);
+    background-size: 500px,600px;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    width: var(--kuan);width: 500px;
+    height: var(--gao);height:600px;
+}
+
+.yangpizhi_context {
+    font-size: 18px;
+    position: relative;
+    padding: 60px 80px;
+    animation: yangpizhi 1500ms 1 ease-out;
+    white-space:normal; word-break:break-all;overflow:hidden;
+}
+
+@keyframes yangpizhi {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
