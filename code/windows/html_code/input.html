@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+</head>
+<body>
+	<table align="center" width = "500" border="1">
+		<caption><h1>表单属性</h1></caption>
+		<thead>
+			<tr>
+				<th>属性</th>
+				<th>属性值</th>
+				<th>描述</th>
+			</tr>	
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan = "9">type</td>
+				<td>text</td>
+				<td>单行文本输入框</td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td>密码输入框</td>
+			</tr>
+			<tr>
+				<td>radio</td>
+				<td>单选按钮</td>
+			</tr>
+			<tr>
+				<td>checkbox</td>
+				<td>复选框</td>
+			</tr>
+			<tr>
+				<td>button</td>
+				<td>普通按钮</td>
+			</tr>
+			<tr>
+				<td>submit</td>
+				<td>提交按钮</td>
+			</tr>
+			<tr>
+				<td>reset</td>
+				<td>重置按钮</td>
+			</tr>
+			<tr>
+				<td>image</td>
+				<td>图像形式的提交按钮</td>
+			</tr>
+			<tr>
+				<td>file</td>
+				<td>文件域</td>
+			</tr>
+			<tr>
+				<td>name</td>
+				<td>text</td>
+				<td>由用户自定义</td>
+			</tr>
+			<tr>
+				<td>value</td>
+				<td>text</td>
+				<td>由用户自定义</td>
+			</tr>
+			<tr>
+				<td>size</td>
+				<td>text</td>
+				<td>框的长度,正整数</td>
+			</tr>
+			<tr>
+				<td>checked</td>
+				<td>text</td>
+				<td>checked</td>
+			</tr>
+			<tr>
+				<td>maxlength</td>
+				<td>text</td>
+				<td>最大字符个数,正整数</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr />
+
+	<h2 align="left">表单案例1</h2>
+	<form action="" method="post">
+		<table align = "center" width="500" height = "500">
+			<caption><h3 style="color: deeppink;font-size: 25px">青春不常在，抓紧谈恋爱</h3></caption>
+			<tbody>
+				<tr>
+					<td>性别</td>
+					<td><input type="radio" name="sex">男&nbsp;<input type="radio" name = "sex">女</td>
+				</tr>
+				<tr>
+					<td><label for="birthday">生日</label></td>
+					<td>
+						<select name="birthday" id="birthday">
+							<option value="">请选择年</option>
+							<option value="">1991</option>
+							<option value="">1992</option>
+							<option value="">1993</option>
+							<option value="">1994</option>
+							<option value="">1995</option>
+							<option value="">1996</option>
+							<option value="">1997</option>
+							<option value="" selected="selected">1998</option>
+							<option value="">1999</option>
+						</select>
+						<select>
+							<option value="">请选择月</option>
+							<option value="">1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+							<option value="">5</option>
+							<option value="">6</option>
+							<option value="">7</option>
+							<option value="">8</option>
+							<option value="">9</option>
+							<option value="">10</option>
+							<option value="">11</option>
+							<option value="">12</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><label for="area">所在地区</label></td>
+					<td><input type="text" value = "杭州" id = "area" name = "area"></td>
+				</tr>
+				<tr>
+					<td>婚姻状况</td>
+					<td><input type="radio" name="marriage">未婚&nbsp;<input type="radio" name = "marriage">离婚&nbsp;<input type="radio" name =	 "marriage">丧偶</td>
+				</tr>
+				<tr>
+					<td><label for="educational">学历</label></td>
+					<td><input type="text" id = "educational"></td>
+				</tr>
+				<tr>
+					<td><label for="salary">月薪</label></td>
+					<td><input type="text" id="salary"></td>
+				</tr>
+				<tr>
+					<td><label for="phone_number">手机号</label></td>
+					<td><input type="text" id="phone_number"></td>
+				</tr>
+				<tr>
+					<td><label for="nickname">昵称</label></td>
+					<td><input type="text" id="nickname"></td>
+				</tr>
+				<tr>
+					<td>喜欢的类型</td>
+					<td><input type="checkbox" name = "hobby">妩媚<input type="checkbox" name = "hobby">柔美<input type="checkbox" name = "<	hobby></hobby>"  checked="checked">可爱<input type="checkbox" name = "hobby">小鲜肉<input type="checkbox" name = "hobby">	型男<input type="checkbox" name = "hobby">气质</td>
+				</tr>
+				<tr>
+					<td><label for="self_introduce">自我介绍</label></td>
+					<td><textarea name="" id="self_introduce" cols="30" rows="10" style="color: #ccc;">在这里写自我介绍</textarea></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="image" src = "../picture/btn.png"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="提交数据" width="50"></td>
+					<td><input type="reset" value="重置"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+
+	<h4 align="center">我承诺</h4>
+	<ul>
+		<li>年满十八岁</li>
+		<li>抱着严肃的态度</li>
+		<li>真诚寻找另一半</li>
+	</ul>
+</body>
+</html>

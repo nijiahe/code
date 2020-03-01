@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		div ul li[class*="test"] {
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<h3>属性选择器有点类似正则表达式</h3>
+	<p>
+		div[class] {
+			color: pink;选择所有有类的
+		}
+		div[class=demo] {
+			color: pink;选择类中有demo的
+		}
+		div[class^=font] { /*  class^=font 表示 font 开始位置就行了 */<br />
+			color: pink;<br />
+		}<br />
+div[class$=footer] { /*  class$=footer 表示 footer 结束位置就行了 */<br />
+			color: skyblue;<br />
+		}<br />
+div[class*=tao] { /* class*=tao  *=  表示tao 在任意位置都可以 */<br />
+			color: green;<br />
+		}<br />
+		<br />
+		支持子代选择器,等等
+		<br />
+
+		<div>
+			<ul>
+				<li class="11test11">TEXT</li>
+				<li>TEXT</li>
+				<li>TEXT</li>
+				<li>TEXT</li>
+				<li>TEXT</li>
+			</ul>
+		</div>
+
+	</p>
+</body>
+</html>

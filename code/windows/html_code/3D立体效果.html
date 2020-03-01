@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		body {
+			/*视距*/
+			perspective: 1000px;
+		}
+
+		div.shawu {
+			width: 300px;
+			height: 300px;
+			background: url(picture/莎雾.jpg) no-repeat;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+			transition: all 0.5s ease 0s;
+			/*设置背对时不可见*/
+			backface-visibility: hidden;
+		}
+		
+		.shawu:hover {
+			transform: rotateY(360deg);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="shawu">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #div1 {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            overflow: hidden;
+        }
+        #div2 {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div id = "div1">
+    <div id="div2"></div>
+</div>
+<input type="button" id="btn1" value="btn1">
+<input type="button" id="btn2" value="btn2">
+<script src="cocos型封装位置函数.js"></script>
+<script>
+    //得到div1
+    var div1=document.getElementById("div1");
+    //得到div2
+    var div2=document.getElementById("div2");
+    //得到btn
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    btn1.onclick=function () {
+        setContentSize(div1,300,300)
+    }
+    btn2.onclick=function () {
+        setContentSize(div2,50,50);
+    }
+</script>
+</body>
+</html>

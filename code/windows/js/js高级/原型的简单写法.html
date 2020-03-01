@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高调の帅</title>
+    <script >
+        function People(name,age)
+        {
+            this.name=name;
+            this.age = age;
+            this.log1 = function() {
+                console.log("log1");
+            }
+        }
+
+        People.prototype={
+            constructor:People,
+            height:"170",
+            weight:"130",
+            log2:function () {
+                console.log("log2");
+            },
+            log3:function () {
+                console.log("log3");
+            }
+        }
+        var nijiahe = new People("nijiahe",20);
+        nijiahe.log1();
+        nijiahe.log2();
+        console.dir(People);
+        console.dir(nijiahe);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

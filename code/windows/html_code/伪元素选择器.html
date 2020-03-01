@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		p::first-line {
+			background-color: skyblue;
+		}
+		p::first-letter {
+			background-color: yellow;
+		}
+		p::selection {
+			color: red;
+			font-size: 50px;
+		}
+		p::before {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+		p::after {
+			content: "";
+			display: block;
+			width: 100px;
+			height: 100px;
+			background-color: green;
+		}
+		 
+		li {
+			background-color: pink;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<p>
+		Linux 操作系统的诞生<br />
+		创始人林纳斯·托瓦兹、发展和成长过程始终依赖着五个重要支柱：UNIX 操作系统、MINIX 操作系统、GNU计划、POSIX 标准和Internet 网络。<br />
+		1981 年IBM公司推出微型计算机IBM PC。<br />
+		1991年，GNU计划已经开发出了许多工具软件，最受期盼的GNUC编译器已经出现，GNU的操作系统核心HURD一直处于实验阶段，没有任何可用性，实质上也没能开发出完整的GNU操作系统，但是GNU奠定了Linux用户基础和开发环境。<br />
+		1991年初，林纳斯·托瓦兹开始在一台386sx兼容微机上学习minix操作系统。1991年4月，林纳斯·托瓦兹开始酝酿并着手编制自己的操作系统。<br />
+		1991 年4 月13 日在comp.os.minix 上发布说自己已经成功地将bash 移植到了minix 上，而且已经爱不释手、不能离开这个shell软件了。<br />
+		1991年7月3日，第一个与Linux有关的消息是在comp.os.minix上发布的（当然此时还不存在Linux这个名称，当时林纳斯·托瓦兹的脑子里想的可能是&lt;FREAX>		&rt;/FREAX>，FREAX的英文含义是怪诞的、怪物、异想天开等）。<br />
+		1991年的10月5日，林纳斯·托瓦兹在comp.os.minix新闻组上发布消息，正式向外宣布Linux内核的诞生（Freeminix-like kernel sources for 386-AT）。<br />
+		1993年，大约有100余名程序员参与了Linux内核代码编写修改工作，其中核心组由5人组成，此时Linux0.99的代码大约有十万行，用户大约有10万左右。<br />
+		1994年3月，Linux1.0发布，代码量17万行，当时是按照完全自由免费的协议发布，随后正式采用GPL协议。<br />
+		1995年1月，BobYoung创办了RedHat（小红帽），以GNULinux为核心，集成了400多个源代码开放的程序模块，搞出了一种冠以品牌的Linux，即RedHatLinux,称为Linux"发行版"，在市场上出售。这在经营模式上是一种创举。<br />
+		1996年6月，Linux2.0内核发布，此内核有大约40万行代码，并可以支持多个处理器。此时的Linux已经进入了实用阶段，全球大约有350万人使用。<br />
+		1998年2月，以Eric Raymond为首的一批年轻的"老牛羚骨干分子"终于认识到GNULinux体系的产业化道路的本质，并非是什么自由哲学，而是市场竞争的驱动，创办了"Open Source Intiative"（开放源代码促进会）"复兴"的大旗，在互联网世界里展开了一场历史性的Linux产业化运动。<br />
+		2001年1月，Linux2.4发布，它进一步地提升了SMP系统的扩展性，同时它也集成了很多用于支持桌面系统的特性：USB，PC卡（PCMCIA）的支持，内置的 即插即用，等等功能。<br />
+		2003年12月，Linux 2.6版内核发布，相对于2.4版内核2.6在对系统的支持都有很大的变化。<br />
+		2004年的第1月，SuSE嫁到了Novell，SCO继续顶着骂名四处强行“化缘”，Asianux，MandrakeSoft也在五年中首次宣布季度赢利。3月，SGI宣布成功实现了Linux操作系统支持256个Itanium 2处理器。<br />
+	</p>
+
+	<h3>伪元素选择器</h3>
+	<ul>
+		<li>p::first-letter文本的第一个单词或字</li>
+		<li>p::first-line文本的第一行</li>
+		<li>p::selection可改变选中文本的样式</li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>

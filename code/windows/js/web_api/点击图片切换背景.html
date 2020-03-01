@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        div.nav {
+
+        }
+
+        div.nav .w {
+            width: 405px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        div.nav .w img {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <div class="w">
+        <img src="images/莎雾.jpg" alt="">
+        <img src="images/特图.png" alt="">
+    </div>
+</div>
+<script>
+    var objs = document.querySelectorAll("div.nav .w");
+    for (var i = 0; i < objs.length; i++) {
+        var childlen = objs[i].children;
+        for (var j = 0; j < childlen.length; j++) {
+            if(childlen[j].nodeName=="IMG")
+            {
+                childlen[j].onclick = function () {
+                    document.body.style.background = "url("+this.src+")" ;
+                    //document.body.style.backgroundSize = "contain" ;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

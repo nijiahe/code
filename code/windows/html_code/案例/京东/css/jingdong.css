@@ -1,0 +1,261 @@
+div.J_event {
+	background-color: #1b212f;
+}
+
+div.J_event a {
+	display: block;
+	height: 80px;
+	background: url(../images/J_event.jpg) no-repeat;
+	position: relative;
+}
+div.J_event .J_event_close {
+	top: 0;
+	left: 1175px;
+	color: rgb(155,155,155);
+	font-size: 15px;
+}
+div.shortcut {
+	background-color: #e3e4e5;
+	border: 1px solid #ddd;
+
+}
+div.shortcut > .w {
+	/*行高会继承*/
+	height: 30px;
+	line-height: 30px;
+	color: #999;
+}
+div.shortcut > .w > .fl > li {
+	margin-left: 200px;
+}
+
+div.shortcut > .w > .fl .icon .icomoon {
+	color: red;
+}
+div.shortcut > .w > .fr {
+	height: 30px;
+}
+div.shortcut > .w > .fr li  {
+	float: left;
+	position: relative;
+}
+div.shortcut > .w > .fr div a {
+	color: #999;
+	font-size: 13px;
+}
+div.shortcut > .w > .fr div {
+	padding: 0 7px;
+	position: relative;
+}
+div.shortcut > .w > .fr .wid_ext {
+	padding-right: 17px;
+}
+
+div.shortcut > .w > .fr div .arrow {
+	font-size: 13px;
+	position: absolute;
+	top: 0px;
+	left: 62px;
+}
+div.shortcut > .w > .fr .spacer {
+	width: 1px;
+	height: 10px;
+	background-color: #999;
+	margin: 11px 5px 0;
+	overflow: hidden;
+}
+div.shortcut > .w > .fr .dt .erweima {
+	position: absolute;
+	top: 30px;
+	left: -3px;
+	background-color: #fcfcfc;
+	padding: 0px;
+	height: 70px;
+}
+div.shortcut > .w > .fr .dt .erweima > img {
+	padding: 4px;
+	border: 1px solid #cfcfcf;
+}
+
+div.header {
+	height: 140px;
+}
+
+div.header .w {
+	position: relative;
+	height: 140px;
+}
+div.header .w .sprite_head{
+	overflow: hidden;
+	position: absolute;
+	top: -31px;
+	box-shadow: 0 -12px 10px rgba(0,0,0,0.2);
+	border-bottom: 1px solid #ededed;
+}
+div.header .w .sprite_head h2{
+	display: none;
+}
+div.header .w .sprite_head a{
+	background-image: url(../images/sprite.head.png);
+	display: block;
+	width: 190px;
+	height: 170px;
+}
+
+div.header .w .search_m{
+	height: 60px;
+}
+
+div.header .w .search_m .form {
+	position: absolute;
+	left: 320px;
+	top: 25px;
+	width: 550px;
+	height: 35px;
+}
+div.header .w .search_m .form .J_searchbg{
+	position: absolute;
+	padding: 4px 44px 4px 4px;
+	width: 450px;
+	height: 25px;
+	border: 1px solid transparent;
+	color: #989898;
+	z-index: 100;
+}
+
+div.header .w .search_m .form .search_a{
+	position: absolute;
+	padding: 4px 44px 4px 4px;
+	width: 450px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid transparent;
+	color: #333;
+	font-size: 15px;
+	outline: none;
+	z-index: 101;
+}
+
+div.header .w .search_m .form .phone-search-btn{
+	position: absolute;
+	height: 35px;
+	line-height: 35px;
+	color: #666;
+	font-size: 20px;
+	left: 470px;
+	font-family: "icomoon";
+	cursor: pointer;
+	z-index: 101;
+}
+
+
+div.header .w .search_m .form .bottom {
+	width: 50px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 20px;
+	background-color: red;
+	position: absolute;
+	color: #fff;
+	left: 500px;
+	cursor: pointer;
+}
+div.header .w .search_m .settleup {
+	position: absolute;
+	right: 99px;
+	top: 25px;
+	width: 190px;
+	height: 35px;
+}
+div.header .w .search_m .settleup .cw_icon {
+	width: 190px;
+	height: 35px;
+	border: 1px solid #e3e4e5;
+	background-color: #fff;
+	line-height: 35px;
+	font-size: 12px;
+	color: #f10214;
+	text-align: center;
+}
+div.header .w .search_m .settleup .cw_icon .car {
+	color: #f10214;
+	font-size: 16px;
+}
+
+div.header .w .search_m .settleup .cw_icon .num {
+	position: absolute;
+	top: 5px;
+	color: #fff;
+	height: 12px;
+	padding: 1px 3px;
+	font-size: 12px;
+	line-height: 11px;
+	display: inline-block;
+	border-radius: 7px;
+	background-color: #f10214;
+}
+
+div.header .w .search_m .settleup .cw_icon a {
+	color: #f10214;
+}
+
+div.header .w .hotwords {
+	position: absolute;
+	left: 320px;
+	top: 65px;
+	width: 550px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+div.header .w .hotwords li a {
+	font-size: 12px;
+	margin-right: 10px;
+	color: #999;
+}
+
+
+div.header .w .navitem {
+	position: absolute;
+	left: 200px;
+	top: 60px;
+	width: 790px;
+	height: 40px;
+	padding-top: 20px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+div.header .w .navitem ul {
+	line-height: 40px;
+	float: left;
+}
+
+
+div.header .w .navitem ul li {
+	margin-left: 26px;
+}
+div.header .w .navitem ul li a {
+	line-height: 40px;
+	color: #333;
+	font-size: 14px;
+}
+div.header .w .navitem .spacer {
+	float: left;
+	width: 1px;
+	height: 10px;
+	background-color: #999;
+	margin: 16px 0 0 26px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+div.header .w .treasure {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	width: 190px;
+	height: 40px;
+	background-color: pink;
+}

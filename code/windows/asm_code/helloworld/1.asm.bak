@@ -1,0 +1,24 @@
+;功能:修改0号中断函数，使其在触发零号中断时向屏幕中间第0列输出绿字Devide Error
+;安全的内存在0:200-0:2FF
+
+assume cs:code,ds:data
+
+data segment
+	db 'nijiahe$'
+data ends
+
+code segment
+start:
+			mov ax,data
+			mov ds,ax
+			mov bx,0
+			
+			mov ah,9h
+			int 21h
+			
+			mov ax,4c00h
+			int 21h
+			
+
+code ends
+end start

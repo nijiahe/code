@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		div {
+			height: 80px;
+			background-color: skyblue;
+			border: 1px solid red;
+		}
+		.pink_bgc {
+			background-color: pink;
+		}
+
+		.div_display_hidden:hover {
+			display: none;
+		}
+		
+		.div_visibility_hidden:hover {
+			visibility: hidden;
+		}
+
+		.div_overflow_hidden1 {
+			width: 80px;
+			overflow: visible;
+		}
+
+		.div_overflow_hidden2 {
+			width: 80px;
+			overflow: auto;
+		}
+		.div_overflow_hidden3 {
+			width: 80px;
+			overflow: hidden;
+		}
+		.div_overflow_hidden4 {
+			width: 80px;
+			overflow: scroll;
+		}
+	</style>
+</head>
+<body>
+	<h1>元素的显示和隐藏</h1>
+	<h3>①display</h3>
+	示例:两个div,上面那个鼠标移动上去以后display:none
+	<br><br>
+	<div class="div_display_hidden pink_bgc"></div>
+	<div></div>
+	备注:会一直闪的原因:display:none后鼠标是移不到上面的,所以会一直闪,并且display:none不占据位置
+	<h3>②visibility</h3>
+	示例:与上面一样
+	<br><br>
+	<div class="div_visibility_hidden pink_bgc"></div>
+	<div></div>
+	备注:不会一直闪:visibility占据位置
+	<h3>oveflow</h3>
+	<br><br>
+	1.overflow:visible 不剪切内容也不添加滚动条
+	<div class="div_overflow_hidden1">
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+	</div>
+	2.overflow:auto 超出了就加滚动条,不超出就不加
+	<div class="div_overflow_hidden2">
+		11
+		11
+	</div>
+	<div class="div_overflow_hidden2">
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+	</div>
+	3.overflow:hidden 超出的部分隐藏
+	<div class="div_overflow_hidden3">
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+	</div>
+	4.overflow:scroll 不管超不超出都加滚动条
+	<div class="div_overflow_hidden4">
+		11
+		11
+	</div>
+	<div class="div_overflow_hidden4">
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+		111111111111111111111111111111111
+	</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		div {
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+			border: 1px solid red;
+		}
+		
+		table {
+			border-collapse: collapse;
+			margin:0 auto;
+		}
+		th {
+			border:1px solid red;
+		}
+		
+		.first {
+			position: static;
+			top: 50px;
+			left: 50px;
+		}
+
+		.second {
+			position: relative;
+			top: 50px;
+			left: 50px;
+		}
+		.third {
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		.forth {
+			position: fixed;
+			top: 50px;
+			left: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	<!--
+	一个完整的定位由定义模式和边偏移组成
+	1.
+	定位模式
+	position属性常用值
+	值					描述
+	static				自动定位(默认定位方式),即取消定位
+	relative			相对定位,相对于其原文档的位置进行定位
+	absolute			绝对定位,相对于其上一个已经定位的父元素进行定位
+	fixed				相对于浏览器窗口进行定位
+
+	2.
+	-->
+	<p>1.static 即默认定位方式,取消定位</p>
+	<div class="first"></div>
+	<p>2.relative 相对定位,按照文档位置定位,注意,相对定位的定位占据原有位置但是能点击的部分偏移</p>
+	<p>①直接的一个div </p>
+	<a href="#"><div class="second"></div></a>
+	<br>
+	<br>
+	<br>
+	<p>②div中的div,这里是父second类,子无类,此时则两个div框重合</p>
+	<div class = "second">
+		<div ></div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<p>③两个并列的div,第一个无类,第二个second类</p>
+	<div></div>
+	<div class="second"></div>
+	<br>
+	<br>
+	<br>
+	<p>3.absolute绝对定位,相当于上一个已经定位过的父元素进行定位,例如这里是按照body的位置进行定位,即在最上面</p>
+	<div class = "third">
+		<div ></div>
+	</div>
+	<p>4.fixed 相当于浏览器定位</p>
+	<div class="forth"></div>
+
+	<p>备注:重叠部分的叠放次序可用z-index:2来改变<br>
+	定位之后默认转换为行内块元素</p>
+
+	<table>
+		<caption><h1>定位属性表</h1></caption>
+		<thead>
+			<tr>
+				<th>定位模式</th>
+				<th>是否脱标占有位置</th>
+				<th>是否可以使用边偏移</th>
+				<th>移动位置基准</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>静态static</th>
+				<th>不脱标,正常模式</th>
+				<th>不可以</th>
+				<th>正常</th>
+			</tr>
+			<tr>
+				<th>相对定位relative</th>
+				<th>脱标,占有位置</th>
+				<th>可以</th>
+				<th>正常的位置</th>
+			</tr>
+			<tr>
+				<th>绝对定位absolute</th>
+				<th>完全脱标,不占有位置</th>
+				<th>可以</th>
+				<th>相对于上个定位父级</th>
+			</tr>
+			<tr>
+				<th>固定定位fixed</th>
+				<th>完全脱标</th>
+				<th>可以</th>
+				<th>相对于浏览器</th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

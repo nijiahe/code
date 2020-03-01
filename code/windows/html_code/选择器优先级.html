@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+</head>
+<body>
+	<!--
+	1.权重1 0 0 0
+	行内表达式
+	如:
+	<p color = "red">test</p>
+	
+	2.权重0 1 0 0
+	id选择器
+	如
+	#player {
+		color = "pink";
+	}
+	<p id = "player">test</p>
+
+	3.权重0 0 1 0
+	类选择器
+	如:
+	.god {
+		color = "yellow";
+	}
+	<p class = "god">test</p>
+
+	4.权重0 0 0 1
+	标签选择器
+	如:
+	p {
+		color = "red";
+	}
+	<p>test</p>
+
+	5.特殊   权重+∞
+	!important标签
+	如:
+	p {
+		color = "red"important;
+	}
+	此时此选择器的作用被提升为无穷大
+	<p>test</p>
+
+	6.权重0 0 0 0
+	* {
+		color = "pink";
+	}
+
+	7.权重0 0 0 0
+	继承而来的属性
+	-->
+</body>
+</html>

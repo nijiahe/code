@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		li {
+			height: 30px;
+			width: 200px;
+			border: 1px solid red;
+			line-height: 30px;
+			white-space: nowrap;
+			overflow: hidden;
+		}
+		.text_hidden1 {
+			text-overflow: clip;
+		}
+		.text_hidden2 {
+			text-overflow: ellipsis;
+		}
+	</style>
+</head>
+<body>
+	<h1>outline轮廓线</h1>
+	outline: ontline-color outline-style outline-width
+	<br />
+	<input  type="text" style="outline: none">
+	<h1>文本域拖拽</h1>
+	第一个添加了resize：none,第二个没有添加
+	<br>
+	<textarea  style="resize: none"></textarea>
+	<br>
+	<textarea></textarea>
+	<h1>文本域溢出的文字隐藏</h1>
+	①强制文字一行内显示: white-space: normal  正常显示  white-space :nowrap  强制一行内显示
+	<br>
+	②溢出的部分隐藏: over-flow: hidden
+	<br>
+	③设置隐藏文字溢出: text-overflow: clip 简单的裁剪  text-overflow: ellipsis  显示省略号的隐藏
+	<br>
+
+	<li class="text_hidden1">1111111111111111111111111</li>
+	<br>
+	<li class="text_hidden2">1111111111111111111111111</li>
+	<br>
+</body>
+</html>

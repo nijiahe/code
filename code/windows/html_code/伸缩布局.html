@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		.father {
+			width: 100%;
+			height: 300px;
+			border: 1px solid red;
+			box-sizing: border-box;
+			display: flex;
+			/*调整排列方向:row 水平排列;
+						   column 垂直排列;
+						   row-reverse 水平翻转;
+						   column-reverse 垂直翻转;
+						   默认row*/
+			flex-direction : row-reverse;
+		}
+		.father .child {
+			height: 100%;
+		}
+		.father .child:nth-child(1)
+		{
+			background-color: pink;
+			width: 600px;
+		}
+		.father .child:nth-child(2)
+		{
+			background-color: yellow;
+			flex: 1;
+		}
+		.father .child:nth-child(3)
+		{
+			background-color: green;
+			flex: 1;
+		}
+		.father .child:nth-child(4)
+		{
+			background-color: skyblue;
+			flex: 1;
+		}
+		.father .child:nth-child(5)
+		{
+			background-color: blue;
+			flex: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+		<div class="child"></div>
+	</div>
+</body>
+</html>

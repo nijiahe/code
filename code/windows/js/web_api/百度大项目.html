@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高调の帅</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+
+        .clearfix:before,.clearfix:after {
+            content:"";
+            display:table;  /* 这句话可以出发BFC BFC可以清除浮动,BFC我们后面讲 */
+        }
+        .clearfix:after {
+            clear:both;
+        }
+        div.w {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        div.w .search {
+            width: 600px;
+            height: 60px;
+            margin-top: 300px;
+            box-sizing: border-box;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        .text {
+            padding-left: 5px;
+            float: left;
+            width: 500px;
+            height: 40px;
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        .find {
+            float: left;
+            width: 90px;
+            height: 40px;
+            background-color: #3385ff;
+            color: white;
+        }
+
+        .nav_list {
+            position: absolute;
+            top: 50px;
+            width: 500px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+            background-color: white;
+        }
+
+        .nav_list li {
+            color: #555;
+            padding: 6px;
+            padding-left: 15px;
+            font-size: 15px;
+        }
+
+        .nav_list li:hover {
+            background-color: yellow;
+        }
+
+        div.adv {
+            margin-top: 30px;
+            width: 600px;
+            height: 100px;
+            border: 1px solid red;
+            color: red;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div class="w">
+    <div class="search clearfix">
+        <input type="text" class="text" id="t_ipt">
+        <input type="button" class="find" value="百度一下">
+        <div>
+            <ul class="nav_list" id="nav_list">
+                <li>li1</li>
+                <li>li2</li>
+            </ul>
+        </div>
+    </div>
+    <div class="adv">
+        广告
+    </div>
+</div>
+<script>
+    var array = [
+        "1111",
+        "2222",
+        "1122",
+        "1212",
+        "1133",
+        "1313",
+        "2233",
+        "3333",
+        "2222",
+    ]
+    var t_ipt = document.getElementById("t_ipt");
+    t_ipt.onkeyup=function () {
+        var text = this.value;
+        var temp_arr=[];
+        for(var i=0;i<array.length;i++)
+        {
+            if(array[i].indexOf(text)==0)//如果数组中的字符串包含这个文本且在最开头
+            {
+                temp_arr.push(array[i]);
+            }
+        }
+        var nav_list = document.getElementById("nav_list");
+        nav_list.innerHTML="";
+        if(text==""||temp_arr.length==0)
+        {
+            nav_list.style.display="none";
+            return;
+        }
+        else
+        {
+            nav_list.style.display="block";
+            var len = temp_arr.length > 5?5:temp_arr.length;
+            for(var j=0;j<len;j++)
+            {
+                var obj = document.createElement("li");
+                obj.innerText=temp_arr[j];
+                nav_list.appendChild(obj);
+            }
+        }
+    }
+    t_ipt.onblur=function () {
+        var nav_list = document.getElementById("nav_list");
+        nav_list.innerHTML="";
+        nav_list.style.display="none";
+    }
+
+</script>
+
+</body>
+</html>

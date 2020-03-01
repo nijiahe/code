@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高调の帅</title>
+    <style>
+        #div1 {
+            background-color: skyblue;
+            width: 300px;
+            height: 300px;
+        }
+        #div2 {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+        }
+        #div3 {
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+        }
+        /*
+        addEventListener的boolean类型的意义是控制父节点的事件是在捕获阶段就执行还是在冒泡阶段执行
+        false代表捕获阶段,true代表冒泡阶段
+        e.eventPhase;
+        1.事件捕获阶段:从外向里,从父节点到子节点
+        2.事件目标阶段:
+        3.事件冒泡阶段:从里向外,从子节点到父节点,从子节点开始递归
+
+        //阻止默认事件跳转
+        return false;
+        e.preventDefault();
+
+        为了阻止冒泡,有以下方法
+        1.window.event.cancelButtle=true;//IE8写法
+        2.e.stopPropagation();//火狐写法
+        谷歌都支持
+        e在IE8中不存在,window.event在火狐不存在,可以用此写兼容代码
+        */
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3"></div>
+    </div>
+</div>
+<script>
+    var objs = [document.getElementById("div1"),
+        document.getElementById("div2"),
+        document.getElementById("div3")];
+    for(var i=0;i<objs.length;i++)
+    {
+        objs[i].onclick=function () {
+            console.log(this.id);
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		div[class*="test"] {
+			width: 300px;
+			height: 300px;		
+		}
+		.test {
+			background-color: skyblue;
+			transform: translate(100px,100px);
+		}
+		.test:hover {
+			transform: translate(100px,100px) scale(0.8,0.8);
+		}
+		.test2 {
+			background-color: yellow;
+		}
+
+	</style>
+</head>
+<body>
+	transform: translate(100px,100px);
+	translate和相对定位效果一致,会占用原有位置
+	<div>
+		<div class="test">
+		
+		</div>
+	</div>
+
+	<div class="test2">
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #test {
+            width: 300px;
+            height: 300px;
+            border: 2px solid skyblue;
+        }
+    </style>
+</head>
+<body>
+<input type="button" id="btn" value="设置标签内文本">
+    <div id="test">
+
+    </div>
+<script src = "common.js"></script>
+<script>
+    function setInnerText(element,text) {
+        if(element.textContent == "undefined")
+        {
+            element.innerText = text;
+        }
+        else
+        {
+            element.textContent = text;
+        }
+    }
+    function getInnerText(element)
+    {
+        if(element.textContent == "undefined")
+        {
+            return element.innerText;
+        }
+        else
+        {
+            return element.textContent;
+        }
+    }
+    my$("btn").onclick = function () {
+        var obj = my$("test");
+        setInnerText(obj,"this is a div");
+        //my$("test").textContent = "this is a div"
+        // innerHTML获得标签里面的文本的,而InnerTEXT不会输出标签;
+        obj.innerHTML = "<p>this is a p</p>";
+        console.log(obj.innerHTML);
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        img {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<img src="images/莎雾1.jpg" alt="" id = "shawu">
+<script src = "封装动画函数.js"></script>
+<script>
+    //得到图片
+    var img = document.getElementById("shawu");
+    //设置页面的鼠标移动事件,参数为鼠标事件
+    document.onmousemove = function (evt) {
+        //兼容性:火狐只支持evt,IE8只支持window.event
+        /*//鼠标相对于页面可视区域的横坐标
+        img.style.left = window.event.clientX+"px";
+        //鼠标相对于页面可视区域的纵坐标
+        img.style.top = evt.clientY+"px";*/
+        //那么兼容代码
+        //var e = evt?evt:window.event;
+        /*img.style.left = e.clientX+"px";
+        img.style.top = e.clientY+"px";*/
+        //但是clientX clientY得到的是可视区域的横纵坐标,这里应该用相对于浏览器的横纵坐标,但IE8中的e没有pageX和pageY属性
+        /*img.style.left = e.pageX+"px";
+        img.style.top = e.pageY+"px";
+        //IE8中只能通过卷出去的部分的大小+可视区域的相对位置才能获得当前鼠标相对于浏览器的坐标
+        function getScroll() {
+            return {
+                left:window.pageYOffset||document.body.scrollLeft||document.documentElement.scrollLeft||0,
+                top:window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop||0
+            }
+        }
+        img.style.left = getScroll().left + e.clientX+"px";
+        img.style.top = getScroll().top + e.clientY +"px";*/
+
+
+        /*合成一个最终版本的代码*/
+        var event={
+            //得到事件的兼容代码
+            getEvent:function (e) {
+                return e?e:window.event;
+            },
+            //得到可视区域X的兼容代码
+            getClientX:function (e) {
+                return this.getEvent(e).clientX;
+            },
+            //得到可视区域Y的兼容代码
+            getClientY:function (e) {
+                return this.getEvent(e).clientY;
+            },
+            //得到卷出去的区域的兼容代码
+            getScroll:function()  {
+                return {
+                    left:window.pageYOffset||document.body.scrollLeft||document.documentElement.scrollLeft||0,
+                    top:window.pageYOffset||document.body.scrollTop||document.documentElement.scrollTop||0
+                }
+            },
+            getPageX:function (e) {
+                return this.getEvent(e).pageX?this.getEvent(e).pageX:this.getClientX(e)+this.getScroll().left;
+            },
+            getPageY:function (e) {
+                return this.getEvent(e).pageY?this.getEvent(e).pageY:this.getClientY(e)+this.getScroll().top;
+            }
+        };
+        img.style.left = event.getPageX(evt)+"px";
+        img.style.top = event.getPageY(evt)+"px";
+
+    };
+</script>
+</body>
+</html>

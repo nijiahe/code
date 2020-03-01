@@ -1,0 +1,75 @@
+@font-face {
+  	font-family: 'icomoon';
+  	src:  url('../fonts/icomoon.eot?7kkyc2');
+  	src:  url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+  	  url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+  	  url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+  	  url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  	font-weight: normal;
+  	font-style: normal;
+ 	}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	float: left;
+}
+a {
+	text-decoration: none;
+}
+body {
+	background-color: #F0F3EF;
+}
+img {
+	vertical-align: top;
+}
+ .icomoon {
+	font-family: "icomoon";
+	font-style: normal;
+}
+/*版心*/
+.w {
+	margin: auto;
+	width: 1190px;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+/*小叉号*/
+.across {
+	position: absolute;
+	font-family: "icomoon";
+	font-style: normal;
+}
+
+.s_text {
+	font-size: 13px;
+}
+
+#red {
+	color: red;
+}
+
+.red {
+	color: red;
+}
+/*按钮*/
+.bottom {
+	text-align: center;
+}
+a:hover {
+	color: #c81623!important;
+}

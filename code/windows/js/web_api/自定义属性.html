@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li score = "10">111</li>
+    <li score = "20">222</li>
+    <li score = "30">333</li>
+    <li score = "40">444</li>
+    <li score = "50">555</li>
+</ul>
+
+<script src = "common.js"></script>
+<script>
+    var li_arr = document.getElementsByTagName("li");
+    for(var i = 0; i<li_arr.length;i++)
+    {
+        //设置属性
+        li_arr[i].setAttribute("score",100);
+
+    }
+
+    for(var i = 0; i<li_arr.length;i++)
+    {
+        li_arr[i].onclick = function () {
+            //获得属性
+            console.log(this.getAttribute("score"));
+        }
+    }
+    for(var i = 0; i<li_arr.length;i++)
+    {
+        //删除属性,可以删除自定义的和原来就有的如ClassName
+        li_arr[i].removeAttribute("score",100);
+    }
+
+</script>
+</body>
+</html>

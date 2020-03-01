@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .show {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50px;
+            overflow: hidden;
+        }
+
+        #show1 {
+            left: 50px;
+        }
+
+        #show2 {
+            position: relative;
+            left: 400px;
+        }
+
+        #img2 {
+            position: absolute;
+            display: block;
+        }
+
+        #mask {
+            width: 100px;
+            height: 100px;
+            background-color: rgba(55, 55, 55, 0.3);
+            position: absolute;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="show1" class="show">
+    <img src="images/莎雾1.jpg" alt="" id="img1">
+</div>
+<div id="show2" class="show">
+    <img src="images/莎雾1.jpg" alt="" id="img2">
+</div>
+<div class="mask" id="mask"></div>
+<script src="cocos型封装位置函数.js"></script>
+<script>
+    var show1 = document.getElementById("show1");
+    var show1_position = getWindowPosition(show1);
+    var show1_size = getVisiableSize(show1);
+    var show2 = document.getElementById(("show2"));
+    var img1 = document.getElementById("img1");
+    var img2 = document.getElementById("img2");
+    var mask = document.getElementById("mask");
+    var mask_size = getContentSize(mask);
+    var scale = 3;
+    setContentSize(img1, show1_size.width, show1_size.height);
+    setContentSize(img2, show1_size.width * scale, show1_size.height * scale);
+
+    function setMaskPosition(e) {
+        //设置mask的位置
+        var mousepositon = event.getEventWindowPositoin(e);
+        var show1box = getBoundingBox(show1)
+        var origin_x = mousepositon.x - mask_size.width / 2;
+        var origin_y = mousepositon.y - mask_size.height / 2;
+        if (origin_x < show1box.min_x) {
+            origin_x = show1box.min_x;
+        }
+        else if (origin_x > show1box.max_x - mask_size.width) {
+            origin_x = show1box.max_x - mask_size.width;
+        }
+        if (origin_y < show1box.min_y) {
+            origin_y = show1box.min_y;
+        }
+        else if (origin_y > show1box.max_y - mask_size.height) {
+            origin_y = show1box.max_y - mask_size.height;
+        }
+        setWindowPosition(mask, origin_x, origin_y);
+        //设置show2中图片的位置
+        //得到mask框相对于show1的位置,因为此处的mask的父节点是body
+        var maskpositoin = {
+            x:getWindowPosition(mask).x-getWindowPosition(show1).x,
+            y:getWindowPosition(mask).y-getWindowPosition(show1).y
+        };
+        setPosition(img2,-maskpositoin.x*scale,-maskpositoin.y*scale);
+    }
+
+    show1.onmouseover = function (e) {
+        mask.style.display = "block";
+        setMaskPosition(e);
+        mask.onmousemove = setMaskPosition;
+        mask.onmouseout = function () {
+            mask.onmousemove = null;
+            mask.style.display="none";
+        }
+    };
+
+</script>
+</body>
+</html>

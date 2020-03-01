@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bl {
+            width: 300px;
+            height: 100px;
+            background-color: skyblue;
+            margin-top: 50px;
+            position: absolute;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="属性设置到0px" id="btn1">
+<input type="button" value="属性设置到400px" id="btn2">
+<input type="button" value="属性设置到800px" id="btn3">
+<div id="bl"></div>
+<script src = "封装动画函数.js"></script>
+<script>
+    document.getElementById("btn1").onclick = function () {
+        animate(document.getElementById("bl"), {"width":0,"height":0},document.getElementById("btn2").onclick);
+    };
+    document.getElementById("btn2").onclick = function () {
+        animate(document.getElementById("bl"), {"width":400,"height":400},document.getElementById("btn3").onclick);
+    };
+    document.getElementById("btn3").onclick = function () {
+        animate(document.getElementById("bl"), {"width":800,"height":800},document.getElementById("btn1").onclick);
+    };
+
+</script>
+</body>
+</html>

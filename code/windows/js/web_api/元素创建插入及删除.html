@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.show {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<!--
+1.第一种创建方法;
+document.write("<p>第一种创建方法</p>")
+缺陷:只有在页面加载的时候才能用,加载完毕后会覆盖原有的东西
+2.第二种创建方法
+document.body.innerHTML = "<p>第二种创建方法</p>";
+缺陷:会覆盖要创建区域的所有标签,如果在body处使用,效果和document.write相同
+3.第三种创建方式
+document.createElement("p");
+-->
+<input type="button" value="第一种方法">
+<input type="button" value="第二种方法">
+<input type="button" value="第三种方法">
+<div class="show">
+</div>
+<script>
+    var objs = document.getElementsByTagName("input");
+    for (var i = 0; i < objs.length; i++) {
+        if (i == 0) {
+            objs[i].onclick = function () {
+                document.write("<div class = 'input_div'></div>");
+                var my_d = document.getElementsByClassName("input_div");
+                for (var j = 0; j < my_d.length; j++) {
+                    my_d[j].style.width = "100%";
+                    my_d[j].style.height = "100px";
+                    my_d[j].style.backgroundColor = "skyblue";
+                }
+            }
+        }
+        else if (i == 1) {
+            objs[i].onclick = function () {
+                var show_objs = document.getElementsByClassName("show");
+                show_objs[0].innerHTML = "<div class = 'input_div'></div>";
+                var my_d = document.getElementsByClassName("input_div");
+                for (var j = 0; j < my_d.length; j++) {
+                    my_d[j].style.width = "100%";
+                    my_d[j].style.height = "100px";
+                    my_d[j].style.backgroundColor = "yellow";
+                }
+            }
+        }
+        else if (i == 2) {
+            objs[i].onclick = function () {
+                var my_div = document.createElement("div");
+                my_div.style.width = "100%";
+                my_div.style.height = "100px";
+                my_div.style.backgroundColor = "pink";
+                var objs = document.getElementsByClassName("show");
+                objs[0].appendChild(my_div);//将一个元素插入到另一个元素之后
+                //insertBefore(child,rechild);//将一个元素插入到另一个元素之前
+                //removeChild()//删除元素,传入一个元素
+                //my_div.previousElementSibling;//前一个兄弟元素,相对应的为next
+                //my_div.previousSibling;//前一个兄弟节点,相对应的为next
+
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

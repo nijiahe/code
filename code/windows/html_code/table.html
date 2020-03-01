@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<!--CSS里的内容-->
+	<style>
+		table {
+			text-align: center;
+			width: 500px;
+			border: 1px solid red;
+			border-collapse: collapse;//合并边框
+		}
+		tr,td{
+			text-align: center;
+		}
+		td{
+			height: 25px;
+			border: 1px solid red;
+		}
+	</style>
+</head>
+<body>
+	<!--1.TD，英文全称是"table data cell"，中文含义："表中的数据单元".
+	  2.TR ，英文全称是"table row"的缩写，中文含义"表行".
+	  3.TH，英文全称是"table header cell"的缩写，中文含义"表头单元格".-->
+	
+	<table>
+		<caption><h1>特殊符号表</h1></caption>
+		<thead>
+			<tr>
+				<th>代码</th>
+				<th>含义</th>
+				<th>符号</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>&amp;nbsp;</td>
+				<td>空格</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>&amp;lt;</td>
+				<td>小于</td>
+				<td>&lt;</td>
+			</tr>
+			<tr>
+				<td>&amp;gt;</td>
+				<td>大于</td>
+				<td>&gt;</td>
+			</tr>
+			<tr>
+				<td>&amp;amp;</td>
+				<td>且</td>
+				<td>&amp;</td>
+			</tr>
+			<tr>
+				<td>&amp;yen;</td>
+				<td>人民币</td>
+				<td>&yen;</td>
+			</tr>
+			<tr>
+				<td>&amp;copy;</td>
+				<td>版权</td>
+				<td>&copy;</td>
+			</tr>
+			<tr>
+				<td>&amp;reg;</td>
+				<td>商标</td>
+				<td>&reg;</td>
+			</tr>
+			<tr>
+				<td>&amp;deg;</td>
+				<td>度</td>
+				<td>&deg;</td>
+			</tr>
+			<tr>
+				<td>&amp;plusmn;</td>
+				<td>正负号</td>
+				<td>&plusmn;</td>
+			</tr>
+			<tr>
+				<td>&amp;times;</td>
+				<td>乘</td>
+				<td>&times;</td>
+			</tr>
+			<tr>
+				<td>&amp;divide;</td>
+				<td>除</td>
+				<td>&divide;</td>
+			</tr>
+			<tr>
+				<td>&amp;sup2；</td>
+				<td>平方</td>
+				<td>&sup2;</td>
+			</tr>
+			<tr>
+				<td>&amp;sup3;</td>
+				<td>立方</td>
+				<td>&sup3;</td>
+			</tr>
+		</tbody>	
+	</table>
+
+
+	<table>
+		<caption><h1>表格属性</h1></caption>
+		<thead>
+			<tr>
+				<th>属性名</th>
+				<th>含义</th>
+				<th>常用属性值</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>border</td>
+				<td>设置表格的边框(默认border = "0"无边框)</td>
+				<td>像素值</td>
+			</tr>
+			<tr>
+				<td>cellspacing</td>
+				<td>设置单元格与单元格之间的空白间距(默认为2像素)</td>
+				<td>像素值</td>
+			</tr>
+			<tr>
+				<td>cellpadding</td>
+				<td>设置单元格内容与单元格边框之间的空白区域(默认1像素)</td>
+				<td>像素值</td>
+			</tr>
+			<tr>
+				<td>width</td>
+				<td>设置表格的宽度</td>
+				<td>像素值</td>
+			</tr>
+			<tr>
+				<td>height</td>
+				<td>设置表格的高度</td>
+				<td>像素值</td>
+			</tr>
+			<tr>
+				<td>align</td>
+				<td>设置表格在网页中的对齐方式</td>
+				<td>left,center,right</td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table>
+		<caption><h1>单元格合并原表表格</h1></caption>
+		<tbody>
+			<tr>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+				<td>24</td>
+				<td>25</td>
+				<td>26</td>
+				<td>27</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td>31</td>
+				<td>32</td>
+				<td>33</td>
+				<td>34</td>
+				<td>35</td>
+				<td>36</td>
+				<td>37</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td>41</td>
+				<td>42</td>
+				<td>43</td>
+				<td>44</td>
+				<td>45</td>
+				<td>46</td>
+				<td>47</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td>51</td>
+				<td>52</td>
+				<td>53</td>
+				<td>54</td>
+				<td>55</td>
+				<td >56</td>
+				<td>57</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td>61</td>
+				<td>62</td>
+				<td>63</td>
+				<td>64</td>
+				<td>65</td>
+				<td>66</td>
+				<td>67</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td>71</td>
+				<td>72</td>
+				<td>73</td>
+				<td>74</td>
+				<td>75</td>
+				<td>76</td>
+				<td>77</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table>
+		<caption><h1>单元格合并测试表格</h1></caption>
+		<tbody>
+			<tr>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<td>21</td>
+				<td colspan="3">22</td>
+				<td rowspan="3">25</td>
+				<td>26</td>
+				<td>27</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td>31</td>
+				<td>32</td>
+				<td>33</td>
+				<td>35</td>
+				<td>36</td>
+				<td>37</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td>41</td>
+				<td>42</td>
+				<td>43</td>
+				<td>45</td>
+				<td>46</td>
+				<td>47</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td>51</td>
+				<td>52</td>
+				<td>53</td>
+				<td>54</td>
+				<td>55</td>
+				<td rowspan="2" colspan="2">56</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td>61</td>
+				<td>62</td>
+				<td>63</td>
+				<td>64</td>
+				<td>65</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td>71</td>
+				<td>72</td>
+				<td>73</td>
+				<td>74</td>
+				<td>75</td>
+				<td>76</td>
+				<td>77</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+	</table>
+	<h3>1.行合并</h3>
+	<h4>①合并第二行的第二三四个单元格</h4>
+	则删除23 24,22变为&lt;td colspan="3"&gt;22&lt;/td&gt;
+
+	<h3>2.列合并</h3>
+	<h4>①合并第5行的第二三四个单元格</h4>
+	则删除35 45,25变为&lt;td rowspan="2" colspan="2"&rg;56&lt;/td&gt;
+
+	<h3>2.混合合并</h3>
+	<h4>①合并第56、57、66、67</h4>
+	则删除57 66 67,56变为&lt;td rowspan="2" colspan="2"&gt;56&lt;/td&gt;
+</body>
+</html>

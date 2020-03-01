@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<input type="button" value="修改性别" id="btn">
+<input type="radio" name="sex" class="sex_radio">男
+<input type="radio" name="sex" class="sex_radio">女
+<input type="radio" name="sex" class="sex_radio">保密
+<script>
+    //如果一个元素的属性的值只有一个且是它本身,那么给他赋值boolean类型就行了,如
+    function my$(id) {
+        return document.getElementById(id);
+    }
+
+    my$("btn").onclick=function () {
+        var sex_array = document.getElementsByName("sex");
+        console.log(typeof sex_array);
+        for(var i=0;i<sex_array.length;i++)
+        {
+            if(sex_array[i].checked==true) {
+                if (i != sex_array.length - 1) {
+                    sex_array[i + 1].checked = true;
+                    return;
+                }
+            }
+        }
+        sex_array[0].checked=true;
+    }
+</script>
+</body>
+</html>

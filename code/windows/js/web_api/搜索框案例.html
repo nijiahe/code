@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input.clientname {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+<input type="text" value="请输入内容" class="clientname">
+
+<script>
+    var inobj = document.getElementsByClassName("clientname");
+    //获得焦点
+    inobj[0].onfocus = function () {
+        console.log(this.style.color);
+        if (this.value=="请输入内容") {
+            this.style.color = "black";
+            this.value = "";
+        }
+    }
+    //失去焦点
+    inobj[0].onblur = function () {
+        if (this.value == "") {
+            this.style.color = "gray";
+            this.value = "请输入内容";
+        }
+    }
+</script>
+</body>
+</html>

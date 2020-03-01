@@ -1,0 +1,352 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #fff;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+/*顶部导航栏*/
+.head {
+	height: 100px;
+	background-color: #fff;
+}
+
+/*导航栏内部盒子*/
+.head > .inner {
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+}
+
+/*导航栏内部logo*/
+.head > .inner > .logo {
+	float:left;
+}
+
+/*导航栏内部的导航栏部分*/
+.head > .inner > .nav {
+	float:right;
+	line-height: 100px;
+}
+
+.head > .inner > .nav > .ul {
+	
+}
+
+.head > .inner > .nav > ul > li {
+	display: inline-block;/*让li可以在一行上显示*/
+}
+
+.head > .inner > .nav > ul > li a{
+	display: block;/*让a有长宽*/
+	padding: 0px 20px;
+	height: 98px;
+	text-decoration: none;
+	color: #333;
+	margin-top: 1px;
+}
+
+.head > .inner > .nav > ul > li a:hover{
+	background-color: #2288f696;
+	color: #fff;
+}
+
+.banner {
+	background: url(../image/banner.png) no-repeat;
+	height: 620px;
+
+}
+
+.service {
+	background-color: #fafafa;
+	padding-top: 73px;
+	height: 796px;
+	margin: 0 auto;
+}
+
+.service > .service-hd {
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto 50px;
+	border-top: 1px solid #ccc;
+}
+
+.service > .service-hd > img {
+	margin: -11px auto 25px;
+	display: block;
+}
+
+.service > .service-hd > div {
+	padding: 0 77px;
+	text-align: center;
+	font-size: 11px;
+	color: #666;
+}
+
+.service-md >ul {
+	display: block;
+	width: 1090px;/*margin居中需要指定盒子大小,并且是块级元素*/
+	margin:0 auto;
+	padding-bottom: 64px;
+}
+
+.service-md >ul >li {
+	background-color: #fff;
+	display: inline-block;
+	width: 320px;
+	height: 512px;
+	margin: 0 20px;
+}
+
+.service-md >ul >li >img {
+	margin: 0 auto 45px;
+	display: block;
+}
+
+.service-md >ul >li >h3 {
+	font-size: 18px;
+	font-weight: 2px;
+	text-align: center;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.service-md >ul >li >div {
+	padding: 0 43px;
+	font-size: 11px;
+	color: #666;
+	line-height: 25px;
+	margin-bottom: 40px;
+}
+
+.service-md .service-btm {
+	display: block;
+	width: 150px;
+	height: 40px;
+	margin: 0 auto;
+	background-color: #fff;
+	color: #ff9412;
+	font-size: 12px;
+	border-radius: 5px;
+	line-height: 40px;
+	text-align: center;
+	border:1px solid #ff9412;
+}
+
+.service-md .service-btm:hover {
+	background-color: #ff9412;
+	color: #fff;
+}
+
+.exemple {
+	padding-top: 70px;
+	background-color: #fff;
+	padding-bottom: 70px;
+}
+
+.top {
+	display: block;
+	width: 1004px;
+	height: 40px;
+	margin: 0 auto 50px;
+	border-top: 1px solid #ccc;
+}
+.case {
+	display: block;
+	width: 160px;
+	height: 50px;
+	margin: 0 auto;
+	background-color: #fff;
+	margin-top: -16px;
+	text-align: center;
+}
+
+.exemple  .case h3 {
+	font-size: 18px;
+	line-height: 32px;
+}
+
+.exemple  .case div {
+	font-size: 11px;
+}
+
+.exemple > .bd > ul {
+	display: block;
+	width: 1050px;
+	height: 212px;
+	margin: 0 auto;
+	
+}
+.exemple li {
+	float: left;
+	position: relative;
+	height: 212px;
+}
+
+.bd-mid {
+	margin: 0 40px;
+}
+
+.exemple .bd img {
+	height: 212px;
+}
+
+.exemple li .text_mask {
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	width: 242px;
+	height: 46px;
+	line-height: 46px;
+	font-size: 14px;
+	top: 164px;
+	color: #fff;
+	padding: 0 40px;
+	white-space :nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.exemple li .mask {
+	background: rgba(0,0,0,0.4) url(../image/find_logo.png) center no-repeat;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	display: none;
+}
+
+.exemple li:hover .mask {
+	display: block;
+}
+
+.exemple .bd {
+	position: relative;
+}
+
+.exemple .bd .arrow {
+	position: absolute;
+	top: 50px;
+	width: 40px;
+	height: 120px;
+	background-color: rgba(200,200,200,0.3);
+	font-size: 40px;
+	text-decoration: font-weight;
+	color: black;
+	line-height: 120px;
+	text-align: center;
+}
+
+.exemple .bd .arrow:hover {
+	background-color: rgba(0,0,0,0.6);
+}
+
+.exemple .bd .left_arrow {
+	left: 140px;
+}
+
+.exemple .bd .right_arrow {
+	left: 1337px;
+}
+
+.media {
+	width: 1104px;
+	margin: 0 auto;
+}
+
+.media td {
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	height: 75px;
+}
+
+.media_limit {
+	margin: 0 auto;
+	width: 1100px;
+	height: 232px;
+	overflow: hidden;
+	margin-bottom: 200px;
+}
+
+.footer {
+	height: 130px;
+	color: #fff;
+	background-color: #212425;
+	padding-top: 40px;
+}
+
+.footer .footer_w {
+	width: 790px;
+	height: 110px;
+	margin: 0 auto;
+	padding: 10px;
+	padding-left: 50px;
+}
+
+.footer .footer_w ul {
+	width: 542px;
+	margin: 0 auto;
+
+}
+
+.footer .footer_w ul:after {
+			content: "";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+ }
+
+.footer .footer_w li {
+	margin: 0 5px;
+	float: left;
+	
+	font-size: 14px;
+	
+}
+
+.footer .footer_w a{
+	color: #fff;
+	font-size: 14px;
+}
+
+.footer .phone {
+	float: right;
+	position: relative;
+	top: -5px;
+}
+
+.footer .phone img {
+	vertical-align: middle;
+}
+
+.footer .phone span {
+	color: #888888;
+	font-size: 20px;
+	position: relative;
+	top: 3px;
+}
+
+.footer_w_left {
+	overflow: hidden;
+	width: 612px;
+	display: inline-block;
+}
+.footer_w_left .copyright {
+	color: #888888;
+	font-size: 14px;
+	margin: 0 auto;
+	width: 502px;
+	margin-top: 16px;
+
+}

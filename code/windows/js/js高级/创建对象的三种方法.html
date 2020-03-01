@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高调の帅</title>
+    <script >
+        //1.字面量创建方式
+        var test1={
+            name:"nijiahe",
+            age:20,
+            wow:function () {
+                console.log("ss");
+            }
+        };
+
+        //2.调用系统的构造函数
+        var test2=new Object();
+        test2.name="nijiahe";
+        test2.age=20;
+        test2.wow=function () {
+            console.log("ss");
+        }
+
+        //3.自定义构造函数
+        function Test3(name,age) {
+            this.name=name;
+            this.age=age;
+            this.wow=function () {
+                console.log("ss");
+            };
+        }
+
+        var test3=new Test3("nijiahe",20);
+        console.log(test3 instanceof Test3);
+
+        //4.工厂模式创建对象
+        function createTest4() {
+            var obj=new Object();
+            obj.name="nijiahe";
+            obj.age=20;
+            obj.wow=function () {
+                console.log("ss");
+            };
+            return obj;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

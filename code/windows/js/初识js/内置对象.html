@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script >
+        //一:Date
+        // 1.不传参数时得到当前时间
+        var date1 = new Date();
+        console.log(date1);
+        // 2.传参数时得到传入的时间,但如果传入的时间错误则会得到那一年的1月1日0时0分,如传入6月31日
+        var date2 = new Date("2018-06-30");
+        console.log(date2);
+        console.log(date2.toDateString());
+        console.log(date2.toLocaleDateString());
+        console.log(date2.toLocaleString());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

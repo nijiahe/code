@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高调の帅</title>
+</head>
+<body>
+
+</body>
+<script >
+    (function (window) {
+         function Random() {
+
+         }
+         Random.prototype.getRandom = function(min,max){
+             return Math.floor(Math.random()*(max-min)+min);
+            };
+         window.Random = new Random();
+        }
+    )(window);
+
+
+    (function(window){
+            function GameMap(map_x_num,map_y_num,map_x_width,map_y_height)
+            {
+                this.map_x_num = map_x_num;
+                this.map_y_num = map_y_num;
+                this.map_x_width = map_x_width;
+                this.map_y_height = map_y_height;
+                this.CreateMap = function () {
+                    this.map = document.createElement("div");
+                    this.map.style.width = this.map_x_num * this.map_x_width + "px";
+                    this.map.style.height = this.map_y_num * this.map_y_height + "px";
+                    this.map.style.backgroundColor = "gray";
+                    this.map.style.position="relative";
+                    console.log(this.map);
+                    document.body.appendChild(this.map);
+                };
+                this.CreateRandomFood = function () {
+                    if(this.map==null)
+                    {
+                        return;
+                    }
+                    this.food = document.createElement("div");
+                    console.log(this.food);
+                    this.food.style.position = "absolute";
+                    this.food.style.width=this.map_x_width+"px";
+                    this.food.style.height=this.map_y_height+"px";
+                    this.food.style.backgroundColor="green";
+                    var x = Random.getRandom(0,this.map_x_num);
+                    this.food.style.left = x*this.map_x_width+"px";
+                    var y = Random.getRandom(0,this.map_y_num);
+                    this.food.style.top = y*this.map_y_height+"px";
+                    console.log(x,y);
+                    this.map.appendChild(this.food);
+                }
+            }
+            window.GameMapCreator = new GameMap(20,20,20,20);
+        }
+    )(window);
+
+    GameMapCreator.CreateMap();
+    GameMapCreator.CreateRandomFood();
+</script>
+</html>

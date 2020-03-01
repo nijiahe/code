@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="点击发生事件" id="btn">
+<input type="button" value="解除事件1" id="remove1">
+<input type="button" value="解除事件2" id="remove2">
+<input type="button" value="解除事件3" id="remove3">
+<input type="button" value="解除事件4" id="remove4">
+
+<script>
+    var func1 = function () {
+        console.log("事件1");
+    };
+    var func2 = function () {
+        console.log("事件2");
+    };
+    var func3 = function () {
+        console.log("事件3");
+    };
+    var func4 = function () {
+        console.log("事件4");
+    };
+
+    function myAddEventListener(elem, type, func) {
+        //大部分浏览器支持
+        if (elem.addEventListener) {
+            elem.addEventListener(type, func, false);
+        }
+        //IE8支持
+        else if (elem.attachEvent) {
+            elem.attachEvent("on" + type, func);
+        }
+        else {
+            elem["on" + type] = func;
+        }
+    }
+
+    function myremoveEventListener(elem, type, func) {
+        if (elem.removeEventListener) {
+            elem.removeEventListener(type, func, false);
+        }
+        else if (elem.detachEvent) {
+            elem.detachEvent("on" + type, func);
+        }
+        else {
+            elem["on"+type] = null;
+        }
+    }
+
+    var obj = document.getElementById("btn");
+    /*obj.addEventListener("click", func1, false);
+    obj.addEventListener("click", func2, false);
+    obj.addEventListener("click", func3, false);
+    obj.addEventListener("click", func4, false);*/
+    myAddEventListener(obj, "click", func1);
+    myAddEventListener(obj, "click", func2);
+    myAddEventListener(obj, "click", func3);
+    myAddEventListener(obj, "click", func4);
+
+    for (var i = 1; i <= 4; i++) {
+        var obj = document.getElementById("remove" + i);
+        obj.onclick = function () {
+            myremoveEventListener(document.getElementById("btn"), "click", eval("func" + this.id[6]));
+        }
+    }
+</script>
+</body>
+</html>

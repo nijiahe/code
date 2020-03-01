@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*创建对象的三种方式*/
+        //1.通过构造函数
+        var man = new Object();
+
+        function createMan(name, age) {
+            var man = new Object();
+            man.name = name;
+            man.age = age;
+            man.speak = function () {
+                console.log("I am so handsome");
+            }
+            return man;
+        }
+
+        var man1 = createMan();
+        man1.speak();
+        //2.通过自定义构造函数
+        /*自定义的对象类型仍然是object
+        *
+        * */
+        function Man(name, age){
+            this.name = name;
+            this.age = age;
+            this.speak = function () {
+                console.log("this is so handsome");
+            }
+        }
+
+        var man2 = new Man("nijiahe",19);
+        man2.speak();
+        //3.字面量的方式(一次性对象)
+        var man3 = {
+            name:"nijiahe",
+            age:19,
+            speak:function () {
+                console.log("字面量创建");
+            }
+        }
+        man3.speak();
+        console.log(typeof  man3);
+        /*访问对象属性也可以通过这样访问*/
+        man3["speak"]();
+        console.log("for in 遍历man3");
+        /*for in 遍历man3*/
+        for (var value in man3)
+        {
+            console.log(value,man3[value]);
+        }
+        console.log(man3 instanceof Object);
+        Math.acos(x)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

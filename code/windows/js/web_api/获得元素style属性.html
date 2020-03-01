@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.bl {
+            width: 300px;
+            height: 100px;
+            background-color: skyblue;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value = "获取left属性值" id="btn">
+    <div class="bl" id="bl"></div>
+<script >
+
+    function getStyle(elem,attr)
+    {
+        return window.getComputedStyle?window.getComputedStyle(elem,null)[attr]:elem.currentStyle[attr];
+    };
+
+
+
+    document.getElementById("btn").onclick = function () {
+        var obj = document.getElementById("bl");
+        console.log(getStyle(obj,"left"));
+    };
+
+</script>
+</body>
+</html>

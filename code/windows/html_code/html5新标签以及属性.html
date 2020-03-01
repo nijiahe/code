@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		.useful_signs {
+			border: 1px solid skyblue;
+			padding: 15px;
+		}
+		.box_limit {
+			display: block;
+			width: 500px;
+			overflow: hidden;
+		}
+		table {
+			border-collapse: collapse;
+		}
+		table td , table th {
+			border: 1px solid skyblue;
+		}
+	</style>
+</head>
+<body>
+	<h2>HTML5中的新标签及属性</h2>
+	<div>
+		<div class="box_limit">
+			<div class="useful_signs">
+				<p>常用新标签</p>
+				<ul>
+					<li>header：定义文档的页眉 头部</li>
+					<li>nav：定义导航链接的部分</li>
+					<li>footer：定义文档或节的页脚 底部</li>
+					<li>article：定义文章。</li>
+					<li>section：定义文档中的节（section、区段）</li>
+					<li>aside：定义其所处内容之外的内容 侧边</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<table>
+		<caption><h2>新增input的type类型</h2></caption>
+		<thead>
+			<tr>
+				<th>类型</th>
+				<th>使用示例</th>
+				<th>含义</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>email</td>
+				<td>&lt;input&nbsp;type="email"&gt;</td>
+				<td>邮箱</td>
+			</tr>
+			<tr>
+				<td>tel</td>
+				<td>&lt;input&nbsp;type="tel"&gt;</td>
+				<td>手机号码</td>
+			</tr>
+			<tr>
+				<td>url</td>
+				<td>&lt;input&nbsp;type="url"&gt;</td>
+				<td>路径</td>
+			</tr>
+			<tr>
+				<td>number</td>
+				<td>&lt;input&nbsp;type="number"&gt;</td>
+				<td>数字</td>
+			</tr>
+			<tr>
+				<td>search</td>
+				<td>&lt;input&nbsp;type="search"&gt;</td>
+				<td>搜索框(体现语义)</td>
+			</tr>
+			<tr>
+				<td>range</td>
+				<td>&lt;input&nbsp;type="range"&gt;</td>
+				<td>自动拖动滑块</td>
+			</tr>
+			<tr>
+				<td>time</td>
+				<td>&lt;input&nbsp;type="time"&gt;</td>
+				<td>小时分钟</td>
+			</tr>
+			<tr>
+				<td>date</td>
+				<td>&lt;input&nbsp;type="date"&gt;</td>
+				<td>年月日</td>
+			</tr>
+			<tr>
+				<td>datetime</td>
+				<td>&lt;input&nbsp;type="datetime"&gt;</td>
+				<td>时间</td>
+			</tr>
+			<tr>
+				<td>month</td>
+				<td>&lt;input&nbsp;type="month"&gt;</td>
+				<td>月年</td>
+			</tr>
+			<tr>
+				<td>week</td>
+				<td>&lt;input&nbsp;type="week"&gt;</td>
+				<td>星期 年</td>
+			</tr>
+		</tbody>
+	</table>
+	<table>
+		<caption><h2>新增input的属性</h2></caption>
+		<thead>
+			<tr>
+				<th>属性</th>
+				<th>用法</th>
+				<th>含义</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>placeholder</td>
+				<td>&lt;input&nbsp;type="text"&nbsp;placeholder="请输入用户名"&gt;</td>
+				<td>占位符,当用户输入的时候,里面的文字消失,删除所有文字,自动返回</td>
+			</tr>
+			<tr>
+				<td>autofocus</td>
+				<td>&lt;input&nbsp;type="text"&nbsp;autofocus&gt;</td>
+				<td>规定当页面加载时 input 元素应该自动获得焦点</td>
+			</tr>
+			<tr>
+				<td>multiple</td>
+				<td>&lt;input&nbsp;type="file"&nbsp;multiple&gt;</td>
+				<td>多文件上传</td>
+			</tr>
+			<tr>
+				<td>autocomplete</td>
+				<td>&lt;input&nbsp;type="text"&nbsp;autocomplete="off"&gt;</td>
+				<td>规定表单是否应该启用自动完成功能<br />
+					有2个值,一个是on 一个是off on 代表记录已经输入的值<br />
+					1.autocomplete 首先需要提交按钮 <br/>
+					2.这个表单您必须给他名字
+				</td>
+			</tr>
+			<tr>
+				<td>required</td>
+				<td>&lt;input&nbsp;type="text"&nbsp;required&gt;</td>
+				<td>必填项&nbsp;内容不能为空</td>
+			</tr>
+			<tr>
+				<td>accesskey</td>
+				<td>&lt;input&nbsp;type="text"&nbsp;accesskey="s"&gt;</td>
+				<td>规定激活（使元素获得焦点）元素的快捷键,采用 alt + s的形式</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

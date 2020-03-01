@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script >
+        /*函数的定义方式*/
+        //1.直接定义函数
+        function test() {
+            var array = new Array("hahah");
+            console.log(array);
+            console.log("this is a test");
+        }
+        function add(num1,num2) {
+            return num1+num2;
+        }
+        /*可变参函数*/
+        function addall()
+        {
+            var num = 0;
+            for(var i = 0;i < arguments.length; i++)
+            {
+                num+=arguments[i];
+            }
+            return num;
+        }
+        test();
+        console.log(add(100,200));
+        console.log("可变参函数%d",addall(1,2,3,4,1,1,1));
+        //2.匿名函数赋值
+        var func1 = function () {
+            console.log("匿名函数");
+
+        }
+        func1();
+        console.log("匿名函数类型 %s",typeof func1);
+    </script>
+    <script >
+
+        test();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

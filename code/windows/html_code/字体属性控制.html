@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>高调の帅</title>
+	<style>
+		
+		th{
+			color:red;
+		}
+
+		td{
+			text-align: center;
+			color:red;
+		}
+		
+		caption{
+			color: deeppink;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<table border="1px" width="800px" align="center" cellspacing="0px">
+		<caption>字体属性控制表</caption>
+		<tbody>
+			<tr>
+				<td>字体大小</td>
+				<td>font-size</td>
+				<td>单位:px</td>
+			</tr>
+			<tr>
+				<td>字体</td>
+				<td>font-family</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>字体加粗</td>
+				<td>font-weight</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>字体倾斜</td>
+				<td>font-style</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>字体属性连写</td>
+				<td>必须有font-size和font-family</td>
+				<td>选择器{font:font-style font-weight font-size/line-height font-family;}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<hr />
+
+	<table border="1px" width="800px" align="center" cellspacing="0px">
+		<caption>文本格式化标签样式</caption>
+		<tbody>
+			<tr>
+				<th>标签</th>
+				<th colspan="2">样式</th>
+			</tr>
+			<tr>
+				<td rowspan="2">em和i倾斜</td>
+				<td>取消倾斜</td>
+				<td>font-style:normal:</td>
+			</tr>
+			<tr>
+				<td>添加倾斜</td>
+				<td>font-style:italic</td>
+			</tr>
+			<tr>
+				<td rowspan="2">strong和b加粗</td>
+				<td>取消加粗</td>
+				<td>font-weight:normal 400</td>
+			</tr>
+			<tr>
+				<td>添加加粗</td>
+				<td>font-weight:bold 700</td>
+			</tr>
+			<tr>
+				<td rowspan="2">ins和u下划线</td>
+				<td>删除下划线</td>
+				<td>text-decoration:none</td>
+			</tr>
+			<tr>
+				<td>添加下划线</td>
+				<td>text-decoration:underline</td>
+			</tr>
+			<tr>
+				<td rowspan="2">del和s删除线</td>
+				<td>删除删除线</td>
+				<td>text-decoration:none</td>
+			</tr>
+			<tr>
+				<td>添加下划线</td>
+				<td>text-decoration:line-through</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
